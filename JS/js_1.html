@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js_1</title>
+</head>
+
+<body>
+    <p>出個1-10的數字，看看系統會猜了幾次</p>
+    <input id="myInput" type="text" value="">
+    <button id="myButton">點一下開始</button>
+
+    <script type="text/javascript">
+        document.getElementById("myButton").onclick = function () {
+
+            var gotIt = false;
+            var guesses = 1;
+            var x;
+           
+            while (gotIt == false) {
+                x = Math.random();
+                x = x * 10;
+                x = Math.floor(x);
+                console.log(x);
+                if (document.getElementById("myInput").value == x) {
+                    gotIt = true;
+
+                } else {
+                    guesses++;
+                }
+
+            }
+            alert("總共猜了"+guesses+"次");
+
+
+        }
+    </script>
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: RGBA(255, 100, 100, 0.5);
+            color: brown;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        #box {
+            width: 140px;
+            height: 140px;
+            background-color: brown;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <H1>考考反應的遊戲</H1>
+    <P class="bold">反應時間為:<span id="time">0</span>秒</P>
+    <div id="box"></div>
+    <script type="text/javascript">
+        var time = Math.random();
+        time = time * 2000;
+        var createdTime;
+        var clickTime;
+        var reactionTime;
+
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF'.split('');
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+
+        }
+
+        function makeBox() {
+            setTimeout(function () {
+                document.getElementById("box").style.backgroundColor = getRandomColor();
+                document.getElementById("box").style.display = "block";
+                createdTime = Date.now();
+            }, time);
+
+
+        }
+        document.getElementById("box").onclick = function () {
+            document.getElementById("box").style.display = "none";
+
+            clickTime = Date.now();
+            reactionTime = (clickTime - createdTime) / 1000;
+            document.getElementById("time").innerHTML = reactionTime;
+            makeBox();
+        }
+        makeBox();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=f, initial-scale=1.0">
+    <title>js</title>
+    <!-- <style>
+        #circle{
+            width:200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 100px;
+
+        } -->
+
+
+    </style>
+</head>
+
+<body>
+
+    
+    <!-- <button id="myButton">請按我一下</button>
+    <p id="text">獲取一段文字</p>
+
+    <button id="myButton1">請按我二下</button>
+    <p id="text1">我想添加:</p>
+    <button id="myButton2">請按我三下</button>
+    <p id="text2"></p> -->
+        <!-- <div id="circle"></div> -->
+        <!-- <input id="myInput" type="text" value="看看是什麼">
+        <button id="button3">請按我四下</button>
+        <p id="text">這是需要修改的地方</p> -->
+        <p>猜數字遊戲，請猜猜1-10!希望您能盡快猜對哦</p>
+        <input id="myInput" type="text" placeholder="請在這裡輸入1-10的數字">
+        <button id="myButton4">請點按我猜看看!</button>
+    <script type="text/javascript">
+        // document.getElementById("text").innerHTML = "修改後的文字";
+        // document.getElementById("myButton").onclick = function () {
+
+        //     document.getElementById("myButton").innerHTML = "修改後的文字";
+
+        // }
+        // document.getElementById("myButton1").onclick = function () {
+
+        //     document.getElementById("text1").innerHTML = document.getElementById("text1").innerHTML + "別問很可怕";
+
+        // }
+        // document.getElementById("myButton2").onclick = function () {
+
+        //     document.getElementById("text2").innerHTML = "<ul><li>apple</li><li>nana</li><li>fruit</li></ul>";
+
+        // }
+        // document.getElementById("circle").onclick=function() {
+        //     document.getElementById("circle").style.display="none";
+        // }
+        // var myVar = document.getElementById("myInput").value;
+        // document.getElementById("button3").onclick=function() {
+        //     var myVar = document.getElementById("myInput").value;
+        //     document.getElementById("text").innerHTML= myVar;
+        // }
+        document.getElementById("myButton4").onclick=function(){
+            var x = Math.random();
+            x=x*11;
+            x=Math.floor(x);
+            if(document.getElementById("myInput").value==x){
+                alert("恭喜你答對了!恭喜哦!");
+            }else{
+                alert("不好意思啦!你猜錯了!這次數字是" + x);
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

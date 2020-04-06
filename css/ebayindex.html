@@ -1,0 +1,443 @@
+<html lang="zh-hant-TW">
+
+<head>
+	<title> My eBay</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<style type="text/css">
+		body{
+			margin:0;
+		}
+		header{
+			box-shadow:0 3px 5px #cccccc; 
+			padding:9px;
+			position:relative;
+			z-index:1;
+		}
+	
+		.container{
+			width:1200px;
+			margin:auto;
+		}
+		.navbar{
+			list-style-type:none;
+			font-size:18px;
+			margin:0;
+			padding:0;
+			
+		
+		}
+		
+		li.navItem{
+			display:inline;
+			border-right:1px solid #777777;
+		}
+		li.navItem a{
+			padding:0 9px;
+			color:black;
+			
+		}
+		li.navItem a:link{
+			text-decoration:none;
+			
+		}
+		li.navItem a:hover{
+			text-decoration:underline;
+			color:#0654BA;
+			
+		
+		}
+		 #singin-style a link{
+			color:#0654BA;
+			padding:0px;
+		 
+		 }
+		 
+		 #singin-style a:link:last-child{
+		 
+			padding-right:16px;
+		 }
+		 .float-right{
+			float:right;
+		 }
+		
+		.no-border{
+			border-right:none !important;
+		}
+		#alert{
+			margin-top:-5px;
+			padding:0 15px 0 10px; 
+		}
+		#cart{
+			margin-top:-5px;
+			padding:0 15px 0 10px; 
+		}
+		<!--------------------------Search Form--------------------->
+		#search-bar{
+			width:100%;
+			height:65px;
+			overflow:hidden;
+		
+		}
+		.setBGColor{
+			background-color:#F9F9F9;
+		}
+		.clearfix{
+		
+			clear:both;
+		}
+		#brand{
+			float:left;
+		}
+		#shopping-button{
+			float:left;
+			width:70px;
+			font-size:14px;
+			color:#555555;
+			border:none;
+			background-color:#F9F9F9;
+			margin-right:15px;
+		}
+		#arrow{
+			position:relative;
+			bottom:35px;
+			left:40px;
+		}
+		#searchForm{
+			float:left;
+			margin-top:10px;
+			margin-left:15px;
+		}
+		.text-field{
+			font-size:16px;
+			color:#767676;
+			padding:10px 0 9px 8px;
+			border:1px solid #ddd;
+		
+		}
+		#search-field{
+			border-radius:3px 0 0 3px;
+			width:630px;
+			height:100px:
+			box-sizing:border-box;
+			border:2px dolid #ddd;
+		}
+		#category-textfield{
+			border-radius:0 3px 3px 0;
+			padding:11px 10px 11px 10px;
+			height:40px;
+			width:180px;
+			background-color:#fff;
+			box-sizing:border-box;
+			margin-left:-5px;
+		}
+		.options{
+			border:none;
+			font-size:14px;
+			width:100%;
+			background-color:transparent;
+		}
+		.btn-primary{
+			font-size:16px;
+			height:40px;
+			font-weight:500;
+			border-radius:3px;
+			border:0;
+			color:#fff;
+			padding:8px 19px 9px 19px;
+			background:linear-gradient(to bottom,#0079bc,#00509d);
+		}
+		.btn-primary:hover{
+			background:#00509d;
+		}
+		#advanced-button{
+			color:#555555;
+			text-decoration:none;
+			font-size:16px;
+			margin-left:10px;
+		}
+		#advanced-button:hover{
+			color:#065dBA;
+		}
+		<!--------------------------Navigation Bar--------------------->
+		nav{
+			width:100%;
+			height:35px;
+			padding-top:12px;
+		}
+		.tb-border{
+			border-top:2px solid #ddd;
+			border-bottom:2px solid #ddd;
+		}
+		#Navigation-Bar{
+			width:100%;
+			height:35px;
+			padding:6px 0 7px 0 ;
+			box-sizing:border-box;
+		
+		}
+		.li-space{
+			float:left;
+			padding:0 1% 0 1%;
+		}
+		.divider{
+			float:left;
+			width:1;
+			height:24px;
+			background:#ddd;
+			margin:0 10px;
+		}
+		<!--------------------------Ad--------------------->
+		
+		#adsection{
+			
+			height:402px;
+			padding:32px 0 ;
+		}
+		#column1{
+			float:left;
+			height:402px;
+			width:700px;
+			
+		}
+		#column2{
+			position:relative;
+			float:left;
+			height:402px;
+			width:500px;
+			
+		}
+		.add-border{
+			border:1px solid #555;
+			box-sizing:border-box;
+		}
+		#ad1{
+			height:402px;
+			width:700px;
+			
+	
+		}
+		#ad2{
+			position:absolute;
+			height:190px;
+			width:450px;
+			top:0;
+			right:0;
+		
+	
+		}
+		#ad3{
+			position:absolute;
+			height:190px;
+			width:450px;
+			bottom:0;
+			right:0;
+			
+		}
+		<!--------------------------Product Section--------------------->
+		#productSection{
+			width:100%;
+			height:650px;
+			padding-bottom:75px;
+			overflow:hidden;
+		}
+		.heading{
+			height:45px;
+			border-bottom:1px solid #ddd;
+			font-weight:400;
+			color:#555;
+		}
+		#show-product{
+			width:100%;
+			height:602.5px;
+		
+		}
+		.product1{
+			float:left;
+			width:600px;
+			height:602.5px;
+		}
+		.photo-column1{
+			border:2px solid #ddd;
+			float:left;
+			width:550px;
+			height:600px;
+			box-sizing:border-box;
+			overflow:hidden;
+		}
+		#photo1{
+			width:500px;
+			height:500px;
+		}
+		.photo-column2{
+			border:2px solid #ddd;
+			float:left;
+			width:550px;
+			height:600px;
+			box-sizing:border-box;
+			overflow:hidden;
+		}
+		#photo2{
+			width:500px;
+			height:500px;
+		}
+		
+		.description{
+			font-weight:400;
+			font-size:16px;
+			line-height:1.5;
+		
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<ul class="navbar">
+				<li id="singin-style" class="navItem">HI!<a href="">Sign</a>or<a href="">register</a></li>
+				<li class="navItem"><a href="">Daily Deals</a></li>
+				<li class="navItem"><a href="">sell</a></li>
+				<li class="navItem no-border"><a href="">Hepl&Contact</a></li>
+				<li id="cart"class="navItem float-right no-border"><img src="img/cart.jpg" alt="cart" title="這是您的購物車" width="30px"></li>
+				<li id="alert"class="navItem float-right no-border"><img src="img/alert.png" alt="alert" width="30px"></li>
+				<li class="navItem float-right no-border"><a href="">My eBay</a></li>
+			</ul>
+		</div>
+	
+	</header>
+	<!--------------------------Search Form--------------------->
+	<div id="search-bar" class="clearfix setBGColor">
+		<div class="container">
+			<img id="brand"src="img/ebay.png" alt="eBay" height="55px">
+			<button id="shopping-button" type="button">
+				<p>Shop by category</p>
+				<img id="arrow"src="img/arrow.jpg" alt="arrow" width="20px">
+			</button>
+			<form id="searchForm">
+				<table>
+				<tr>
+					<td><input id="search-field" class="text-field"type="text" name="search-content" placeholder="search for anything"></td>
+					<td><div id="category-textfield" class="text-field">
+						<select class="options" name="cate">
+							<option selected="selected" value="0">第一個</option>
+							<option value="1">第二個</option>
+							<option value="2">第三個</option>
+							<option value="3">第四個</option>
+							<option value="4">第五個</option>
+							<option value="5">第六個</option>
+							<option value="6">第七個</option>
+							<option value="7">第八個</option>
+						
+						</select>
+						
+					</div></td>
+					<td><input class="btn-primary text-field" value="search" type="submit"></td>
+					<td><a href="#" id="advanced-button" title="高級搜索">Advanced</a></td>
+				
+				</tr>
+				</table>
+			</form>
+		
+		</div>
+		
+		
+	</div>
+	
+	<!--------------------------Navigation Bar--------------------->
+	<nav class="clearfix setBGColor">
+		<div class="container">
+			<ul id="Navigation-Bar" class="navbar tb-border">
+				<li class="navItem no-border li-space"><a href="#">Following</a></li>
+				<li class="navItem no-border li-space"><a href="#">Today</a></li>
+				<div class="divider"></div>
+				<li class="navItem no-border li-space"><a href="#">Fashion</a></li>
+				<li class="navItem no-border li-space"><a href="#">Electronics</a></li>
+				<li class="navItem no-border li-space"><a href="#">Collectibles & art</a></li>
+				<li class="navItem no-border li-space"><a href="#">Home & Garden</a></li>
+				<li class="navItem no-border li-space"><a href="#">Sporting Goods</a></li>
+				<li class="navItem no-border li-space"><a href="#">Motors</a></li>
+				<li class="navItem no-border li-space"><a href="#">Daily Deals</a></li>
+				
+			</ul>
+		</div>
+	</nav>
+	<!--------------------------Ad--------------------->
+	<section id="adsection" class="clearfix setBGColor ">
+		<div class="container">
+			<div id="column1">
+				<div>
+					<img id="ad1" class="add-border"src="img/ad1.jfif" alt="ad1">
+				</div>
+			</div>
+	
+			<div id="column2">
+				<div>
+					<img id="ad2" class="add-border"src="img/ad2.jfif" alt="ad2">
+				</div>
+				<div>
+					<img id="ad3" class="add-border"src="img/ad3.jfif" alt="ad3">
+				</div>
+			</div>
+	
+	
+	
+	
+	
+	
+	
+		</div>
+	</section>
+	<!--------------------------Product Section--------------------->
+	<section id="productSection" class="clearfix setBGColor">
+	
+		<div class="container">
+		
+			<h2 class="heading">Today's Featured Collections</h2>
+			<div id="show-product">
+				<div class="product1">
+					<div class="photo-column1">
+						
+							<img id="photo1" src="img/prophoto1.jpg" >
+								<!-- ---------article-------- -->
+					<article>
+						<div class="left-col">
+							<h3 class="title">產品介紹</h3>
+							<div class="description">
+								<p>這是有趣的PS4遊戲，魔物獵人-世界</p>
+							</div>
+						</div>
+					</article>
+					</div>
+					
+						
+			
+				</div>
+			
+					<div class="product2">
+					<div class="photo-column2">
+						
+							<img id="photo2" src="img/prophoto2.jpg" >
+								<!-- ---------article-------- -->
+					<article>
+						<div class="left-col">
+							<h3 class="title">產品介紹</h3>
+							<div class="description">
+								<p>這是魔物獵人的DLC，必買!</p>
+							</div>
+						</div>
+					</article>
+					</div>
+					
+						
+			
+				</div>
+			</div>
+			
+	
+			
+		</div>
+	</section>
+	
+</body>
+
+</html>
